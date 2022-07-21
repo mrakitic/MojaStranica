@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/lightbox.css" />
+
     <title>Zadatak</title>
   </head>
   <body>
@@ -28,107 +30,133 @@
     <div class="main-me">
       <h1 class="center">Ovo su slike moga predivnoga grada!</h1>
       <div class="wrapper-img">
-        <div class="image">
-          <img
-            class="myImg"
-            src="../images/crkva.jpg"
-            alt="crkva"
-            width="150"
-            height="150"
-          />
+        <div class="image" data-index="1">
+          <a href="../images/crkva.jpg" data-lightbox="models"
+            ><img
+              class="myImg"
+              id="model-1-image"
+              src="../images/crkva.jpg"
+              alt="crkva"
+              width="200"
+              height="150"
+          /></a>
         </div>
-        <div class="image">
-          <img
-            class="myImg"
-            src="../images/dvorac.jpg"
-            alt="dvorac"
-            width="150"
-            height="150"
-          />
+        <div class="image" data-index="2">
+          <a href="../images/dvorac.jpg" data-lightbox="models">
+            <img
+              class="myImg"
+              id="model-2-image"
+              src="../images/dvorac.jpg"
+              alt="dvorac"
+              width="200"
+              height="150"
+            />
+          </a>
         </div>
-        <div class="image">
-          <img
-            class="myImg"
-            src="../images/dvoracdva.jpg"
-            alt="dvorac"
-            width="150"
-            height="150"
-          />
+        <div class="image" data-index="3">
+          <a href="../images/dvoracdva.jpg" data-lightbox="models"></a>
+            <img
+              class="myImg"
+              id="model-3-image"
+              src="../images/dvoracdva.jpg"
+              alt="dvorac"
+              width="200"
+              height="150"
+            />
+          </a>
         </div>
-        <div class="image">
+        <div class="image" data-index="4">
+          <a href="../images/dvoractri.jpg" data-lightbox="models"
+            >
           <img
             class="myImg"
+            id="model-4-image"
             src="../images/dvoractri.jpg"
             alt="dvorac"
-            width="150"
+            width="200"
             height="150"
           />
+          </a>
         </div>
 
-        <div class="image">
+        <div class="image" data-index="5">
+          <a href="../images/dvoraccetiri.jpg" data-lightbox="models"
+            >
           <img
             class="myImg"
+            id="model-5-image"
             src="../images/dvoraccetiri.jpg"
             alt="dvorac"
-            width="150"
+            width="200"
             height="150"
           />
+          </a>
         </div>
-        <div class="image">
+        <div class="image" data-index="6">
+          <a href="../images/centar.jpg" data-lightbox="models"
+            >
           <img
             class="myImg"
+            id="model-6-image"
             src="../images/centar.jpg"
             alt="centar"
-            width="150"
+            width="200"
             height="150"
           />
+          </a>
         </div>
-        <div class="image">
+        <div class="image" data-index="7">
+          <a href="../images/perivoj.jpg" data-lightbox="models"
+            >
           <img
             class="myImg"
+            id="model-7-image"
             src="../images/perivoj.jpg"
             alt="perivoj"
-            width="150"
+            width="200"
             height="150"
           />
+          </a>
         </div>
-        <div class="image">
+        <div class="image" data-index="8">
+          <a href="../images/krizanje.jpg" data-lightbox="models"
+            >
           <img
             class="myImg"
+            id="model-8-image"
             src="../images/krizanje.jpg"
             alt="krizanje"
-            width="150"
+            width="200"
             height="150"
           />
+          </a>
         </div>
 
-        <div class="image">
+        <div class="image" data-index="9">
+          <a href="../images/spomenik.jpg" data-lightbox="models"
+            >
           <img
             class="myImg"
+            id="model-9-image"
             src="../images/spomenik.jpg"
             alt="spomenik"
-            width="150"
+            width="200"
             height="150"
           />
+          </a>
         </div>
-        <div class="image">
+        <div class="image" data-index="10">
+          <a href="../images/spomenikdva.jpg" data-lightbox="models"
+            >
           <img
             class="myImg"
+            id="model-10-image"
             src="../images/spomenikdva.jpg"
             alt="spomenik"
-            width="150"
+            width="200"
             height="150"
           />
-        </div>
-        <div class="popup-image">
-          <span>&times;</span>
-          <img
-            class="myImg"
-            src="../images/crkva.jpg"
-            alt="crkva"
-            width="150"
-            height="150"
-          />
+          </a>
         </div>
       </div>
     </div>
@@ -144,17 +172,6 @@
           document.getElementById("current_date").innerHTML =
             day + "." + month + "." + year + ".";
 
-          document.querySelectorAll(".wrapper-img img").forEach((image) => {
-            image.onclick = () => {
-              document.querySelector(".popup-image").style.display = "block";
-              document.querySelector(".popup-image img").src =
-                image.getAttribute("src");
-            };
-          });
-
-          document.querySelector(".popup-image span").onclick = () => {
-            document.querySelector(".popup-image").style.display = "none";
-          };
           const hamburger = document.querySelector(".hamburger");
           const nav = document.querySelector(".nav");
           hamburger.addEventListener("click", () => {
@@ -168,6 +185,7 @@
             })
           );
         </script>
+        <script src="../lightbox-plus-jquery.js"></script>
       </div>
     </footer>
   </body>

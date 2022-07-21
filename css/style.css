@@ -15,7 +15,7 @@ body {
 }
 
 .nav a {
-  font-family: "Segoe UI";
+  font-family: "Helvetica";
   color: #f2f2f2;
   padding: 14px 16px 5px 16px;
   text-decoration: none;
@@ -33,14 +33,14 @@ body {
   padding: 14px 16px 5px 16px;
 }
 .city-content-first {
-  font-family: "Segoe UI";
+  font-family: "Helvetica";
   color: #f2f2f2;
   display: flex;
   justify-content: space-around;
   font-size: 14px;
 }
 .city-content-second {
-  font-family: "Segoe UI";
+  font-family: "Helvetica";
   color: #f2f2f2;
   display: flex;
   justify-content: space-around;
@@ -56,7 +56,7 @@ body {
 .main {
   display: flex;
   justify-content: center;
-  font-family: "Segoe UI";
+  font-family: "Helvetica";
   color: #f2f2f2;
   font-size: 62px;
   margin: auto;
@@ -66,12 +66,12 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: auto;
-  font-family: "Segoe UI";
+  font-family: "Helvetica";
   color: #f2f2f2;
 }
 
 .foot-content {
-  font-family: "Segoe UI";
+  font-family: "Helvetica";
   color: #f2f2f2;
   display: flex;
   justify-content: center;
@@ -125,13 +125,16 @@ ul {
 }
 .wrapper-img {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 1em;
+  margin-bottom: 1em;
+  padding-left: 2rem;
 }
 
 .image {
   flex: 0 0 21%;
-  margin-left: 30px;
 }
 
 .myImg {
@@ -153,7 +156,7 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(77, 73, 73, 0.792);
   height: 100%;
   width: 100%;
   z-index: 100;
@@ -189,9 +192,9 @@ ul {
 
 .contact-us {
   display: flex;
-  background: #f8f4e5;
+  background: #f3f0eb;
   padding: 50px 100px;
-  border-top: 10px solid #f45702;
+  border-top: 10px solid #346272;
   margin-bottom: 50px;
 }
 
@@ -248,7 +251,7 @@ button {
   line-height: 24pt;
   padding: 0 20px;
   border: none;
-  background: #f45702;
+  background: #346272;
   color: white;
   letter-spacing: 2px;
   transition: 0.2s all ease-in-out;
@@ -257,8 +260,8 @@ button {
 }
 button:hover {
   background: inherit;
-  color: #f45702;
-  border-bottom: 2px solid #f45702;
+  color: #346272;
+  border: 2px solid #346272;
 }
 
 ::selection {
@@ -295,6 +298,7 @@ textarea:-webkit-autofill:focus {
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    position: fixed;
     margin-bottom: 30px;
     background-color: #262626;
     align-self: flex-end;
@@ -313,7 +317,12 @@ textarea:-webkit-autofill:focus {
     display: none;
   }
   .nav.aktivan {
-    left: 0;
+    left: 85%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 40%;
   }
   .nav {
     position: fixed;
@@ -325,5 +334,8 @@ textarea:-webkit-autofill:focus {
     width: 100%;
     text-align: center;
     transition: 0.3s;
+  }
+  .foot-content {
+    margin-top: 2em;
   }
 }
